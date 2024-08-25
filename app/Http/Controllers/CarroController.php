@@ -12,7 +12,8 @@ class CarroController extends Controller
      */
     public function index()
     {
-        //
+        $carros = Carro::all();
+        return view('welcome', compact('carros'));
     }
 
     /**
@@ -32,7 +33,7 @@ class CarroController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified librosresource.
      */
     public function show(Carro $carro)
     {
